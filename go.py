@@ -134,7 +134,7 @@ def detect_and_align(filename,size):
   """
   resize = True
 
-  img_array = cv.imread(os.path.join(ROOT_PATH,'vggface2_test/test',filename))
+  img_array = cv.imread(os.path.join(ROOT_PATH,'vggface2_test',filename))
   det_imgs = detector.detect(img_array)
   if len(det_imgs) > 0:
     rel = findRelevantFace(det_imgs,img_array.shape[0],img_array.shape[1])
